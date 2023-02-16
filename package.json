@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx sequelize db:migrate && node distr/server.js",
     "dev": "babel-node src/server.js",
     "webpack": "webpack -wd eval-source-map",
-    "build": "babel src  --copy-files --out-dir distr"
+    "build": "webpack && babel src  --copy-files --out-dir distr"
   },
   "keywords": [],
   "author": "",
@@ -29,7 +30,7 @@
     "session-file-store": "^1.5.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
+    "@babel/cli": "^7.20.7",
     "@babel/core": "^7.18.10",
     "@babel/node": "^7.18.10",
     "@babel/preset-env": "^7.18.10",

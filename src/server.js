@@ -20,9 +20,9 @@ const PORT = process.env.PORT ?? 3005;
 
 const app = express();
 
-app.engine('jsx', customRender);
+app.engine('js', customRender);
 app.set('views', path.join(__dirname, 'components'));
-app.set('view engine', 'jsx');
+app.set('view engine', 'js');
 
 app.use(cors());
 app.use(express.static('public'));
